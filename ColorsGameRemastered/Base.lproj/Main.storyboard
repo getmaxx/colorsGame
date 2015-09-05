@@ -161,12 +161,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-Cg-qFu">
-                                <rect key="frame" x="16" y="155" width="568" height="178"/>
+                                <rect key="frame" x="16" y="129" width="568" height="204"/>
                                 <color key="backgroundColor" red="1" green="0.47460364259999999" blue="0.66351066420000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="178" id="7xp-4i-69y"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="204" id="7xp-4i-69y"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="573" id="wQy-Ql-1da"/>
-                                    <constraint firstAttribute="width" secondItem="G0D-Cg-qFu" secondAttribute="height" multiplier="284:89" id="ycy-sM-iuB"/>
+                                    <constraint firstAttribute="width" secondItem="G0D-Cg-qFu" secondAttribute="height" multiplier="284:89" constant="-82.966292134831406" id="ycy-sM-iuB"/>
                                 </constraints>
                                 <variation key="widthClass=compact" ambiguous="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -340,7 +340,7 @@
                             <constraint firstItem="yC5-LB-pma" firstAttribute="top" secondItem="G0D-Cg-qFu" secondAttribute="bottom" constant="13" id="UnN-ZA-BAy"/>
                             <constraint firstItem="G0D-Cg-qFu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W2l-WE-LxQ"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="leading" secondItem="ycb-Dm-OPw" secondAttribute="leading" id="Xuz-pA-zqn"/>
-                            <constraint firstAttribute="centerY" secondItem="G0D-Cg-qFu" secondAttribute="centerY" constant="56" id="YA3-Xh-Mat"/>
+                            <constraint firstAttribute="centerY" secondItem="G0D-Cg-qFu" secondAttribute="centerY" constant="69" id="YA3-Xh-Mat"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="leading" secondItem="yC5-LB-pma" secondAttribute="trailing" constant="6" id="bl5-t3-6yA"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="trailing" secondItem="ycb-Dm-OPw" secondAttribute="trailing" id="cOO-Qh-xgi"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="firstBaseline" secondItem="yC5-LB-pma" secondAttribute="baseline" id="j16-nc-fbn"/>

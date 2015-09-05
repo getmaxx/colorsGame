@@ -137,7 +137,7 @@ static NSString* kSaveLivesKey = @"lives";
     gameIsFinished = NO;
     
 }
-
+// новый игровой раунд и что делать, если проиграл
 - (void) nextGameState {
        
     [self animateInColorView];
@@ -149,10 +149,14 @@ static NSString* kSaveLivesKey = @"lives";
     self.colorButton3.backgroundColor = ((IVColor*)[temp objectAtIndex:2]).color;
     self.colorButton4.backgroundColor = ((IVColor*)[temp objectAtIndex:3]).color;
     
-    [self.colorButton1 setTitle:((IVColor*)[temp objectAtIndex:0]).text forState:UIControlStateNormal];
-    [self.colorButton2 setTitle:((IVColor*)[temp objectAtIndex:1]).text forState:UIControlStateNormal];
-    [self.colorButton3 setTitle:((IVColor*)[temp objectAtIndex:2]).text forState:UIControlStateNormal];
-    [self.colorButton4 setTitle:((IVColor*)[temp objectAtIndex:3]).text forState:UIControlStateNormal];
+    [self.colorButton1 setTitle: ((IVColor*)[temp objectAtIndex:0]).text
+                       forState: UIControlStateNormal];
+    [self.colorButton2 setTitle: ((IVColor*)[temp objectAtIndex:1]).text
+                       forState: UIControlStateNormal];
+    [self.colorButton3 setTitle: ((IVColor*)[temp objectAtIndex:2]).text
+                       forState: UIControlStateNormal];
+    [self.colorButton4 setTitle: ((IVColor*)[temp objectAtIndex:3]).text
+                       forState: UIControlStateNormal];
     
     self.colorView.backgroundColor = game.colorOfView.color;
     
@@ -177,6 +181,12 @@ static NSString* kSaveLivesKey = @"lives";
         self.colorButton2.backgroundColor = [UIColor grayColor];
         self.colorButton3.backgroundColor = [UIColor grayColor];
         self.colorButton4.backgroundColor = [UIColor grayColor];
+        
+        [self.colorButton1 setTitle: @"" forState: UIControlStateNormal];
+        [self.colorButton2 setTitle: @"" forState: UIControlStateNormal];
+        [self.colorButton3 setTitle: @"" forState: UIControlStateNormal];
+        [self.colorButton4 setTitle: @"" forState: UIControlStateNormal];
+       
         
         self.colorView.backgroundColor = [UIColor grayColor];
         self.colorView.alpha = 1.0f;
@@ -239,11 +249,21 @@ static NSString* kSaveLivesKey = @"lives";
 
 // анимация исчезновения colorView
 - (void) fadeAwayColorView: (double) fadeTiming {
-    self.colorView.alpha = 1.0f;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration: fadeTiming];
-    self.colorView.alpha = 0.0f;
-    [UIView commitAnimations];
+    
+    if (gameIsFinished) {
+        
+        self.colorView.alpha = 1.0f;
+        
+    }
+    else {
+        
+        self.colorView.alpha = 1.0f;
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration: fadeTiming];
+        self.colorView.alpha = 0.0f;
+        [UIView commitAnimations];
+        
+    }
 }
 
 // анимация появления colorView
@@ -293,6 +313,12 @@ static NSString* kSaveLivesKey = @"lives";
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSInteger currentNumberOfLives = [defaults integerForKey:kSaveLivesKey];
+    
+    if (currentNumberOfLives == 0) {
+        
+        currentNumberOfLives = [IVGameState numberOfLives];
+        
+    }
     NSLog(@"LOAD LIVES %ld", (long)currentNumberOfLives);
     return currentNumberOfLives;
 }
