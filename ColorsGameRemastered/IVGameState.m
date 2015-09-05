@@ -117,6 +117,14 @@ static int NUMBER_OF_BUTTONS = 4;
         }
         else {
             self.score--;
+            
+            if (self.score < 0) {
+                
+                self.score = 0;
+                
+            }
+
+            
             self.lives--;
         }
     }
@@ -136,6 +144,8 @@ static int NUMBER_OF_BUTTONS = 4;
         }
         else {
             self.score--;
+            
+            
             self.lives--;
         }
     }
@@ -143,5 +153,10 @@ static int NUMBER_OF_BUTTONS = 4;
     return YES;
 }
 
++ (int) numberOfLives {
+    
+    return 3;
+    
+}
 
 @end

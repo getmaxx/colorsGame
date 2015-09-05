@@ -37,6 +37,12 @@ static NSString* kSaveLivesKey = @"lives";
                                   forState: UIControlStateNormal
     ];
     
+    game = [[IVGameState alloc] init];
+    
+    game.score = [self loadScore];
+    game.lives = [self loadLives];
+
+    
     [self preparationsForNewGame];
     
     self.lostGameView.alpha = 0.0f;
@@ -48,7 +54,7 @@ static NSString* kSaveLivesKey = @"lives";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    [self loadScore];
+    
     
 }
 
@@ -60,10 +66,20 @@ static NSString* kSaveLivesKey = @"lives";
     
     if (game.lives == 2)
         self.lifeView3.hidden = YES;
-    else if (game.lives == 1)
+    else if (game.lives == 1) {
+        
+        self.lifeView3.hidden = YES;
         self.lifeView2.hidden = YES;
-    else if (game.lives == 0)
+        
+    }
+    
+    else if (game.lives == 0) {
+        
         self.lifeView1.hidden = YES;
+        self.lifeView2.hidden = YES;
+        self.lifeView3.hidden = YES;
+        
+    }
     
     [self changeGameState];
     [self setNewGameState];
@@ -74,6 +90,10 @@ static NSString* kSaveLivesKey = @"lives";
 - (IBAction) startNewGameAction:(UIButton *)sender {
     
     gameIsFinished = NO;
+    
+    game.lives = [IVGameState numberOfLives];
+    game.score = 0;
+    
     [self preparationsForNewGame];
     [self hideLostGameView];
     [self changeGameState];
@@ -87,10 +107,6 @@ static NSString* kSaveLivesKey = @"lives";
     
     self.colorView.alpha = 1.0f;
     
-    game = [[IVGameState alloc] init];
-    
-    [self loadScore];
-    
     [self nextGameState];
     
     self.colorButton1.enabled = true;
@@ -102,12 +118,21 @@ static NSString* kSaveLivesKey = @"lives";
     self.lifeView2.hidden = NO;
     self.lifeView1.hidden = NO;
     if (game.lives == 2)
+        
         self.lifeView3.hidden = YES;
-    else if (game.lives == 1)
+    
+    else if (game.lives == 1) {
+        
+        self.lifeView3.hidden = YES;
         self.lifeView2.hidden = YES;
-    else if (game.lives == 0)
+    }
+    else if (game.lives == 0) {
+        
         self.lifeView1.hidden = YES;
-
+        self.lifeView2.hidden = YES;
+        self.lifeView3.hidden = YES;
+        
+    }
     
     gameIsFinished = NO;
     
@@ -138,6 +163,8 @@ static NSString* kSaveLivesKey = @"lives";
     }
     
     self.scoreLabel.text = [NSString stringWithFormat:@"%d", game.score];
+    
+    [self saveScoreAndLives];
     
     if (game.lives == 0) {
         
@@ -237,28 +264,36 @@ static NSString* kSaveLivesKey = @"lives";
 - (void) saveScoreAndLives {
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject: self.scoreLabel.text forKey:kSaveScoreKey];
-    [defaults setInteger:game.lives forKey:kSaveLivesKey];
-    NSLog(@"SAVE SCORE %@", self.scoreLabel.text);
+    
+    if (game.lives != 0) {
+        
+        [defaults setInteger: game.lives forKey: kSaveLivesKey];
+        [defaults setInteger: game.score forKey: kSaveScoreKey];
+    }
+    else {
+        
+        [defaults setInteger: [IVGameState numberOfLives] forKey: kSaveLivesKey];
+        [defaults setInteger: 0 forKey: kSaveScoreKey];
+        
+    }
+    
     [defaults synchronize];
 }
 
-- (NSString*) loadScore {
+- (int) loadScore {
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    NSString* scoreString = [defaults objectForKey:kSaveScoreKey];
-    NSLog(@"LOAD SCORE %@", scoreString);
+    int currentScore = [defaults integerForKey:kSaveScoreKey];
+    NSLog(@"LOAD SCORE %d", currentScore);
     //[defaults synchronize];
-    return scoreString;
+    return currentScore;
 }
 
-
-- (NSInteger) loadLives {
+- (int) loadLives {
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSInteger currentNumberOfLives = [defaults integerForKey:kSaveLivesKey];
-    NSLog(@"LOAD LIVES %d", currentNumberOfLives);
-    //[defaults synchronize];
+    NSLog(@"LOAD LIVES %ld", (long)currentNumberOfLives);
     return currentNumberOfLives;
 }
 

@@ -23,4 +23,6 @@
 - (BOOL) gameplay:(NSString*) chosenColor vs:(NSString*) colorOfView;
 - (BOOL) gameplay:(NSArray *)args;
 
++ (int) numberOfLives;
+
 @end

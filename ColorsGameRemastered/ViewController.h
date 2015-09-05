@@ -35,8 +35,8 @@
 // сохранить счет и жизни при выходе
 - (void) saveScoreAndLives;
 // загрузить счет и жизни при выходе
-- (NSInteger) loadLives;
-- (NSString*) loadScore;
+- (int) loadLives;
+- (int) loadScore;
 
 @end
 
