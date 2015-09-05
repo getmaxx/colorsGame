@@ -19,7 +19,7 @@ static NSString* kSaveLivesKey = @"lives";
     IVGameState *game;
     UIView* testView;
     BOOL gameIsFinished;
-    NSTimer* gameStateChangeTimer;
+    //NSTimer* gameStateChangeTimer;
     UIColor* backgroundColor;
     
 }
@@ -48,6 +48,15 @@ static NSString* kSaveLivesKey = @"lives";
     self.lostGameView.alpha = 0.0f;
     
     gameIsFinished = NO;
+    
+    NSLog(@"viewdidload");
+    
+    UIGraphicsBeginImageContext(self.lifeView1.frame.size);
+    [[UIImage imageNamed:@"LiveHeart.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.lifeView1.backgroundColor = [UIColor colorWithPatternImage:image];
     
 }
 
@@ -106,6 +115,7 @@ static NSString* kSaveLivesKey = @"lives";
 - (void) preparationsForNewGame {
     
     self.colorView.alpha = 1.0f;
+    self.view.alpha = 1.0f;
     
     [self nextGameState];
     
@@ -190,12 +200,14 @@ static NSString* kSaveLivesKey = @"lives";
         
         self.colorView.backgroundColor = [UIColor grayColor];
         self.colorView.alpha = 1.0f;
+        //self.view.alpha = 0.5f;
+        //self.lostGameView.alpha = 1.0f;
         
         self.lostGameScoreLabel.text = [NSString stringWithFormat:@"%d", game.score];
         
         [self showLostGameView];
         
-        [gameStateChangeTimer invalidate];
+        [self.gameStateChangeTimer invalidate];
         
         gameIsFinished = YES;
     }
@@ -204,14 +216,18 @@ static NSString* kSaveLivesKey = @"lives";
 
 - (void) setNewGameState {
     
-    [gameStateChangeTimer invalidate];
-    gameStateChangeTimer = nil;
-    gameStateChangeTimer = [NSTimer scheduledTimerWithTimeInterval:IVDifficultyMedium
-                                                          target:self
-                                                        selector:@selector(changeGameState)
-                                                        userInfo:nil
-                                                         repeats:YES
-                          ];
+    if (!gameIsFinished) {
+        
+        [self.gameStateChangeTimer invalidate];
+        self.gameStateChangeTimer = nil;
+        self.gameStateChangeTimer = [NSTimer scheduledTimerWithTimeInterval:IVDifficultyMedium
+                                                                     target:self
+                                                                   selector:@selector(changeGameState)
+                                                                   userInfo:nil
+                                                                    repeats:YES
+                                     ];
+
+    }
     
 }
 

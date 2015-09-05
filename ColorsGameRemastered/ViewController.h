@@ -16,16 +16,19 @@
 @property (strong, nonatomic) IBOutlet UIButton *colorButton3;
 @property (strong, nonatomic) IBOutlet UIButton *colorButton4;
 @property (strong, nonatomic) IBOutlet UIView *colorView; // большой цветной прямоугольник
+@property (strong, nonatomic) IBOutlet UIView *lostGameView;
+
 
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;// счет игры
 
 @property (strong, nonatomic) IBOutlet UIButton *startNewGameButton;// перезапустить игру
 
+@property (strong, nonatomic) NSTimer* gameStateChangeTimer;
+
 - (IBAction) colorButtonPressedAction: (UIButton*) sender;// сменить цвета и счет по нажатию одной из кнопок
 
 - (IBAction) startNewGameAction:(UIButton *)sender;//запустить новую игру
 // окно проигранной игры и его элементы
-@property (strong, nonatomic) IBOutlet UIView *lostGameView;
 @property (strong, nonatomic) IBOutlet UILabel *lostGameScoreLabel;
 @property (strong, nonatomic) IBOutlet UIButton *lostViewNewGameButton;
 // контейнер с жизнями
