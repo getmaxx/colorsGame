@@ -104,7 +104,6 @@ static int NUMBER_OF_BUTTONS = 4;
     self.colorsForButtons = temp;
 }
 
-
 - (BOOL) gameplay:(NSString*) chosenColor vs:(NSString*) colorOfView {
     
     //NSLog(@"chosen:%@ view:%@", chosenColor, colorOfView);
@@ -132,30 +131,9 @@ static int NUMBER_OF_BUTTONS = 4;
     return YES;
 }
 
-- (BOOL) gameplay:(NSArray *)args {
-    
-    //NSLog(@"chosen:%@ view:%@", chosenColor, colorOfView);
-    if ([[args objectAtIndex:0] isEqualToString: [args objectAtIndex:1]])
-        self.score++;
-    else {
-        if (self.lives == 0) {
-            //NSLog(@"proigral");
-            return NO;
-        }
-        else {
-            self.score--;
-            
-            
-            self.lives--;
-        }
-    }
-    //NSLog(@"LIVES %d", self.lives);
-    return YES;
-}
-
 + (int) numberOfLives {
     
-    return 3;
+    return NUMBER_OF_LIVES;
     
 }
 
