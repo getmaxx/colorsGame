@@ -89,6 +89,8 @@ static NSString* kSaveLivesKey = @"lives";
     
     game = [[IVGameState alloc] init];
     
+    [self loadScore];
+    
     [self nextGameState];
     
     self.colorButton1.enabled = true;
@@ -99,10 +101,16 @@ static NSString* kSaveLivesKey = @"lives";
     self.lifeView3.hidden = NO;
     self.lifeView2.hidden = NO;
     self.lifeView1.hidden = NO;
+    if (game.lives == 2)
+        self.lifeView3.hidden = YES;
+    else if (game.lives == 1)
+        self.lifeView2.hidden = YES;
+    else if (game.lives == 0)
+        self.lifeView1.hidden = YES;
+
     
     gameIsFinished = NO;
     
-    [self loadScore];
 }
 
 - (void) nextGameState {
