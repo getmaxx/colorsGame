@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D64E6A131B5E887800D2E2B0 /* IVColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E6A121B5E887800D2E2B0 /* IVColor.m */; };
 		D64E6A161B5E88BD00D2E2B0 /* IVGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = D64E6A151B5E88BD00D2E2B0 /* IVGameState.m */; };
-		D680511C1B83550400D00273 /* IVTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D680511B1B83550400D00273 /* IVTableViewController.m */; };
 		D6AA46321B8294D300B733ED /* BackGroundOld.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AA46301B8294D300B733ED /* BackGroundOld.png */; };
 		D6AA46331B8294D300B733ED /* borderSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AA46311B8294D300B733ED /* borderSmall.png */; };
 		D6AA46351B82953400B733ED /* buttonBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AA46341B82953400B733ED /* buttonBorder.png */; };
@@ -21,6 +20,9 @@
 		D6D7A3021B51BFAC00485067 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6D7A3011B51BFAC00485067 /* Images.xcassets */; };
 		D6D7A3051B51BFAC00485067 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6D7A3031B51BFAC00485067 /* LaunchScreen.xib */; };
 		D6D7A3111B51BFAC00485067 /* ColorsGameRemasteredTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D7A3101B51BFAC00485067 /* ColorsGameRemasteredTests.m */; };
+		D6D827221B9E415C006037F1 /* IVResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D827211B9E415C006037F1 /* IVResultsViewController.m */; };
+		D6D947751BA401D200C275BE /* IVTopScoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D947741BA401D200C275BE /* IVTopScoreVC.m */; };
+		D6D947781BA4020500C275BE /* IVTopScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D947771BA4020500C275BE /* IVTopScoreTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		D64E6A121B5E887800D2E2B0 /* IVColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVColor.m; sourceTree = "<group>"; };
 		D64E6A141B5E88BD00D2E2B0 /* IVGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVGameState.h; sourceTree = "<group>"; };
 		D64E6A151B5E88BD00D2E2B0 /* IVGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVGameState.m; sourceTree = "<group>"; };
-		D680511A1B83550400D00273 /* IVTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVTableViewController.h; sourceTree = "<group>"; };
-		D680511B1B83550400D00273 /* IVTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVTableViewController.m; sourceTree = "<group>"; };
 		D6AA46301B8294D300B733ED /* BackGroundOld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackGroundOld.png; sourceTree = "<group>"; };
 		D6AA46311B8294D300B733ED /* borderSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = borderSmall.png; sourceTree = "<group>"; };
 		D6AA46341B82953400B733ED /* buttonBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBorder.png; sourceTree = "<group>"; };
@@ -57,6 +57,12 @@
 		D6D7A30A1B51BFAC00485067 /* ColorsGameRemasteredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsGameRemasteredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D7A30F1B51BFAC00485067 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D7A3101B51BFAC00485067 /* ColorsGameRemasteredTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsGameRemasteredTests.m; sourceTree = "<group>"; };
+		D6D827201B9E415C006037F1 /* IVResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVResultsViewController.h; sourceTree = "<group>"; };
+		D6D827211B9E415C006037F1 /* IVResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVResultsViewController.m; sourceTree = "<group>"; };
+		D6D947731BA401D200C275BE /* IVTopScoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVTopScoreVC.h; sourceTree = "<group>"; };
+		D6D947741BA401D200C275BE /* IVTopScoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVTopScoreVC.m; sourceTree = "<group>"; };
+		D6D947761BA4020500C275BE /* IVTopScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVTopScoreTableViewCell.h; sourceTree = "<group>"; };
+		D6D947771BA4020500C275BE /* IVTopScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IVTopScoreTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,6 @@
 		D6D7A2E51B51BFAC00485067 = {
 			isa = PBXGroup;
 			children = (
-				D680511A1B83550400D00273 /* IVTableViewController.h */,
-				D680511B1B83550400D00273 /* IVTableViewController.m */,
 				D6D7A2F01B51BFAC00485067 /* ColorsGameRemastered */,
 				D6D7A30D1B51BFAC00485067 /* ColorsGameRemasteredTests */,
 				D6D7A2EF1B51BFAC00485067 /* Products */,
@@ -111,11 +115,10 @@
 		D6D7A2F01B51BFAC00485067 /* ColorsGameRemastered */ = {
 			isa = PBXGroup;
 			children = (
+				D6D947721BA4019B00C275BE /* View-Controllers */,
 				D6D7A31A1B51C04800485067 /* Model */,
 				D6D7A2F51B51BFAC00485067 /* AppDelegate.h */,
 				D6D7A2F61B51BFAC00485067 /* AppDelegate.m */,
-				D6D7A2FB1B51BFAC00485067 /* ViewController.h */,
-				D6D7A2FC1B51BFAC00485067 /* ViewController.m */,
 				D6D7A2FE1B51BFAC00485067 /* Main.storyboard */,
 				D6D7A3011B51BFAC00485067 /* Images.xcassets */,
 				D6D7A3031B51BFAC00485067 /* LaunchScreen.xib */,
@@ -158,8 +161,23 @@
 				D64E6A121B5E887800D2E2B0 /* IVColor.m */,
 				D64E6A141B5E88BD00D2E2B0 /* IVGameState.h */,
 				D64E6A151B5E88BD00D2E2B0 /* IVGameState.m */,
+				D6D827201B9E415C006037F1 /* IVResultsViewController.h */,
+				D6D827211B9E415C006037F1 /* IVResultsViewController.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D6D947721BA4019B00C275BE /* View-Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6D7A2FB1B51BFAC00485067 /* ViewController.h */,
+				D6D7A2FC1B51BFAC00485067 /* ViewController.m */,
+				D6D947731BA401D200C275BE /* IVTopScoreVC.h */,
+				D6D947741BA401D200C275BE /* IVTopScoreVC.m */,
+				D6D947761BA4020500C275BE /* IVTopScoreTableViewCell.h */,
+				D6D947771BA4020500C275BE /* IVTopScoreTableViewCell.m */,
+			);
+			name = "View-Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D680511C1B83550400D00273 /* IVTableViewController.m in Sources */,
+				D6D947751BA401D200C275BE /* IVTopScoreVC.m in Sources */,
+				D6D947781BA4020500C275BE /* IVTopScoreTableViewCell.m in Sources */,
 				D6D7A2F71B51BFAC00485067 /* AppDelegate.m in Sources */,
 				D64E6A161B5E88BD00D2E2B0 /* IVGameState.m in Sources */,
 				D6D7A2FD1B51BFAC00485067 /* ViewController.m in Sources */,
 				D6D7A2F41B51BFAC00485067 /* main.m in Sources */,
+				D6D827221B9E415C006037F1 /* IVResultsViewController.m in Sources */,
 				D64E6A131B5E887800D2E2B0 /* IVColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

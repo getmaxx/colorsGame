@@ -162,7 +162,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-3k-rkf">
                                 <rect key="frame" x="239" y="83" width="122" height="38"/>
-                                <color key="backgroundColor" red="0.54926802363801652" green="0.11877360603769795" blue="0.80941384668508287" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="1mF-pd-Vv4"/>
                                     <constraint firstAttribute="width" constant="122" id="6OK-ki-8Ki"/>
@@ -171,7 +171,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="19"/>
                                 <state key="normal" title="НОВАЯ ИГРА">
-                                    <color key="titleColor" red="1" green="1" blue="0.84999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.51178865610000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -279,21 +279,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFG-G3-Ydf">
                                 <rect key="frame" x="156" y="145" width="288" height="311"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y77-uh-6W4">
-                                        <rect key="frame" x="99" y="217" width="92" height="30"/>
-                                        <color key="backgroundColor" red="0.51178865610000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="h5y-XB-waK"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
-                                        <state key="normal" title="ЕЩЕ РАЗОК">
-                                            <color key="titleColor" red="1" green="1" blue="0.84999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="startNewGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bw9-L2-kSN"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИГРА ОКОНЧЕНА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEY-rP-9tl">
                                         <rect key="frame" x="62" y="87" width="166" height="26"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
@@ -319,6 +304,21 @@
                                         <color key="textColor" red="1" green="0.65523858729999995" blue="0.28010968749999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y77-uh-6W4">
+                                        <rect key="frame" x="99" y="217" width="92" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="h5y-XB-waK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                        <state key="normal" title="ЕЩЕ РАЗОК">
+                                            <color key="titleColor" red="0.54926802360000004" green="0.118773606" blue="0.80941384670000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startNewGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bw9-L2-kSN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58006329429639547" green="1" blue="0.95790682246162895" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -379,17 +379,32 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaI-s0-s6q">
+                                <rect key="frame" x="16" y="28" width="81" height="33"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="18"/>
+                                <state key="normal" title="РЕКОРДЫ">
+                                    <color key="titleColor" red="0.51178865610000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BtY-ZQ-EMR" kind="popoverPresentation" popoverAnchorView="UaI-s0-s6q" id="VSk-jY-H2j">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HP8-0l-ZOf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="2uI-rI-xfj"/>
                             <constraint firstItem="UUm-lV-cQg" firstAttribute="top" secondItem="yC5-LB-pma" secondAttribute="bottom" constant="8" id="3rC-nq-sWm"/>
+                            <constraint firstItem="UaI-s0-s6q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3xN-3r-inr"/>
                             <constraint firstItem="UUm-lV-cQg" firstAttribute="firstBaseline" secondItem="ycb-Dm-OPw" secondAttribute="baseline" id="659-Mu-Utm"/>
                             <constraint firstItem="UUm-lV-cQg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Id-kw-z2n"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="width" secondItem="yC5-LB-pma" secondAttribute="width" id="6co-9n-rJt"/>
                             <constraint firstItem="ts4-Gy-2ar" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="1" id="6gW-gk-7ya"/>
                             <constraint firstItem="UUm-lV-cQg" firstAttribute="leading" secondItem="yC5-LB-pma" secondAttribute="leading" id="E59-aZ-dnL"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="baseline" secondItem="yC5-LB-pma" secondAttribute="firstBaseline" id="HN9-tp-6bW"/>
+                            <constraint firstItem="UaI-s0-s6q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HOa-I9-voQ"/>
                             <constraint firstItem="ycb-Dm-OPw" firstAttribute="leading" secondItem="UUm-lV-cQg" secondAttribute="trailing" constant="6" id="Huf-Up-QwS"/>
                             <constraint firstItem="ycb-Dm-OPw" firstAttribute="top" secondItem="PTP-2b-eQC" secondAttribute="bottom" constant="8" id="Jc0-Xp-Me1"/>
                             <constraint firstItem="SFG-G3-Ydf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KBc-69-VPb"/>
@@ -441,6 +456,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1009" y="89"/>
+        </scene>
+        <!--Top ScoreVC-->
+        <scene sceneID="YnL-qO-3cV">
+            <objects>
+                <viewController id="BtY-ZQ-EMR" customClass="IVTopScoreVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="59N-Mj-fJI"/>
+                        <viewControllerLayoutGuide type="bottom" id="w0B-wE-sCc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pZH-2u-mCz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oq-vx-u4j">
+                                <rect key="frame" x="16" y="20" width="47" height="30"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="15"/>
+                                <state key="normal" title="НАЗАД">
+                                    <color key="titleColor" red="0.54926802360000004" green="0.118773606" blue="0.80941384670000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qqC-qz-tU6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЛУЧШИЕ РЕЗУЛЬТАТЫ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4A2-dV-WsL">
+                                <rect key="frame" x="208" y="26" width="184" height="21"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.65523858729999995" blue="0.28010968749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Oum-QW-mTB">
+                                <rect key="frame" x="150" y="104" width="300" height="391"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9Bk-Ez-0Qb"/>
+                                    <constraint firstAttribute="height" constant="391" id="N1M-fP-b28"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell alpha="0.0" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h7y-4Z-idI" customClass="IVTopScoreTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h7y-4Z-idI" id="evw-pV-ByH">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СЧЕТ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG9-WU-d2X">
+                                                    <rect key="frame" x="208" y="11" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                    <color key="textColor" red="0.54926802360000004" green="0.118773606" blue="0.80941384670000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="МЕСТО" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upc-hf-77t">
+                                                    <rect key="frame" x="49" y="11" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                    <color key="textColor" red="0.54926802360000004" green="0.118773606" blue="0.80941384670000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="placeLabel" destination="evw-pV-ByH" id="aNj-8B-38g"/>
+                                            <outlet property="scoreLabel" destination="cG9-WU-d2X" id="Eqg-I3-pnq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.84999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4A2-dV-WsL" firstAttribute="top" secondItem="59N-Mj-fJI" secondAttribute="bottom" constant="6" id="GAc-25-6FG"/>
+                            <constraint firstAttribute="centerX" secondItem="4A2-dV-WsL" secondAttribute="centerX" id="JRq-Vu-XEX"/>
+                            <constraint firstAttribute="centerY" secondItem="Oum-QW-mTB" secondAttribute="centerY" id="fqQ-oR-lPt"/>
+                            <constraint firstItem="6oq-vx-u4j" firstAttribute="top" secondItem="59N-Mj-fJI" secondAttribute="bottom" id="iBP-LI-ykm"/>
+                            <constraint firstAttribute="centerX" secondItem="Oum-QW-mTB" secondAttribute="centerX" id="kvO-7p-BY9"/>
+                            <constraint firstItem="6oq-vx-u4j" firstAttribute="leading" secondItem="pZH-2u-mCz" secondAttribute="leadingMargin" id="siB-Ck-Vxh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topScoreTableView" destination="Oum-QW-mTB" id="u41-ci-DBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0I-RN-rCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="89"/>
         </scene>
     </scenes>
     <resources>
