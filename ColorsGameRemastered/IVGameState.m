@@ -13,10 +13,14 @@
 
 static int NUMBER_OF_LIVES = 3;
 static int NUMBER_OF_BUTTONS = 4;
+static int NUMBER_OF_TOP_SCORES = 10;
+
+static NSString* kTopScoresArrayKey = @"topScoresArray";
 
 - (id) init {
     
     self = [super init];
+    
     if (self) {
         
         self.score = 0;
@@ -25,6 +29,28 @@ static int NUMBER_OF_BUTTONS = 4;
         
     }
     
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    //загрузить лучшие счета или создать их
+    if ([defaults objectForKey: kTopScoresArrayKey] == nil) {
+        
+        self.arrayOfTopScores = [[NSMutableArray alloc] init];
+        for (int i = 0; i < NUMBER_OF_TOP_SCORES; i++) {
+            [self.arrayOfTopScores addObject: [NSNumber numberWithInt: 0]];// дефолтные лучшие счета
+        }
+        
+        [defaults setObject: self.arrayOfTopScores forKey: kTopScoresArrayKey];
+        [defaults synchronize];
+        
+    }
+    else {
+        
+        [[self arrayOfTopScores] removeAllObjects];
+        self.arrayOfTopScores = [NSMutableArray arrayWithArray:[defaults objectForKey:kTopScoresArrayKey]];
+                                 
+        
+    }
+    NSLog(@"ARRAY OF TOP SCORES %@", self.arrayOfTopScores);
+
     return self;
 }
 
@@ -135,6 +161,29 @@ static int NUMBER_OF_BUTTONS = 4;
     
     return NUMBER_OF_LIVES;
     
+}
+// позиция счета в таблице или число 11, если счет не попал в таблицу рекордов
+- (int) addNewTopScore: (int) score {
+    
+    for (int i = 0; i < NUMBER_OF_TOP_SCORES; i++) {
+        
+        int scoreAtIndex = [(NSNumber*)[self.arrayOfTopScores objectAtIndex: i] intValue];
+        if (score >= scoreAtIndex) {
+            
+           [self.arrayOfTopScores insertObject:
+                                        [NSNumber numberWithInt: score]
+                                         atIndex:i];
+            
+           [[self arrayOfTopScores] removeLastObject];
+            
+           NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+           [defaults setObject: self.arrayOfTopScores forKey: kTopScoresArrayKey];
+           [defaults synchronize];
+           return i;
+        }
+    }
+       
+    return 11;
 }
 
 @end

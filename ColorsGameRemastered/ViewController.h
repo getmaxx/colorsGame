@@ -30,6 +30,7 @@
 - (IBAction) startNewGameAction:(UIButton *)sender;//запустить новую игру
 // окно проигранной игры и его элементы
 @property (strong, nonatomic) IBOutlet UILabel *lostGameScoreLabel;
+@property (strong, nonatomic) IBOutlet UILabel *lostGameResultsLabel;
 @property (strong, nonatomic) IBOutlet UIButton *lostViewNewGameButton;
 // контейнер с жизнями
 @property (strong, nonatomic) IBOutlet UIView *lifeView1;

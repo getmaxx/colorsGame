@@ -19,6 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    
+    NSMutableArray* array = [NSMutableArray arrayWithObjects:@1,@2,@3,@4, nil];
+    [array insertObject:@3.5 atIndex:2];
+    NSLog(@"%@", array);
+    
     return YES;
 }
 

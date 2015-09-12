@@ -17,11 +17,12 @@
 @property (strong, nonatomic) NSMutableArray* arrayOfColors;
 @property (strong, nonatomic) NSArray* colorsForButtons;
 @property (strong, nonatomic) IVColor* colorOfView;
+@property (strong, nonatomic) NSMutableArray* arrayOfTopScores;
 
 
 - (void) setColorsForButtonsAndWiew;
 - (BOOL) gameplay:(NSString*) chosenColor vs:(NSString*) colorOfView;
-- (BOOL) gameplay:(NSArray *)args;
+- (int) addNewTopScore: (int) score;
 
 + (int) numberOfLives;
 

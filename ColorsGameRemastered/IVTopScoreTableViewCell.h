@@ -10,8 +10,7 @@
 
 @interface IVTopScoreTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UIView *placeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *placeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
-
 
 @end

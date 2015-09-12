@@ -46,6 +46,7 @@ static NSString* kSaveLivesKey = @"lives";
     [self preparationsForNewGame];
     
     self.lostGameView.alpha = 0.0f;
+    self.lostGameResultsLabel.textColor = [UIColor colorWithRed:1.0f green:0.38f blue:0.266f alpha:1.0f];
     
     gameIsFinished = NO;
     
@@ -205,12 +206,20 @@ static NSString* kSaveLivesKey = @"lives";
         
         self.lostGameScoreLabel.text = [NSString stringWithFormat:@"%d", game.score];
         
+        if ([game addNewTopScore:game.score] != 11) {
+            
+            self.lostGameResultsLabel.text = @"НОВЫЙ РЕКОРД!";
+            self.lostGameResultsLabel.textColor = [UIColor greenColor];
+            
+        }
+        
         [self showLostGameView];
         
         [self.gameStateChangeTimer invalidate];
         
         gameIsFinished = YES;
-    }
+        
+            }
     
 }
 

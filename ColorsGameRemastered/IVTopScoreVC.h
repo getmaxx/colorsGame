@@ -11,5 +11,6 @@
 @interface IVTopScoreVC : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *topScoreTableView;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 
 @end
