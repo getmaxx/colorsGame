@@ -37,6 +37,15 @@ static NSString* kSaveLivesKey = @"lives";
                                   forState: UIControlStateNormal
     ];
     
+    self.colorButton1.layer.borderWidth = 3.0f;
+    self.colorButton1.layer.borderColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f] CGColor];
+    self.colorButton2.layer.borderWidth = 3.0f;
+    self.colorButton2.layer.borderColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f] CGColor];
+    self.colorButton3.layer.borderWidth = 3.0f;
+    self.colorButton3.layer.borderColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f] CGColor];
+    self.colorButton4.layer.borderWidth = 3.0f;
+    self.colorButton4.layer.borderColor = [[UIColor colorWithRed:0 green:0 blue:0 alpha:0.4f] CGColor];
+    
     game = [[IVGameState alloc] init];
     
     game.score = [self loadScore];
@@ -206,7 +215,7 @@ static NSString* kSaveLivesKey = @"lives";
         
         self.lostGameScoreLabel.text = [NSString stringWithFormat:@"%d", game.score];
         
-        if ([game addNewTopScore:game.score] != 11) {
+        if (([game addNewTopScore:game.score] != 11) && (game.score != 0)) {
             
             self.lostGameResultsLabel.text = @"НОВЫЙ РЕКОРД!";
             self.lostGameResultsLabel.textColor = [UIColor greenColor];

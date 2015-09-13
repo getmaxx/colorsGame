@@ -57,32 +57,32 @@ static NSString* kTopScoresArrayKey = @"topScoresArray";
 + (NSArray *) configureArrayOfColors {
     
     IVColor* red = [[IVColor alloc] init];
-    red.color = [UIColor colorWithRed: 0.901f green: 0.196f blue: 0.232 alpha: 1];
+    red.color = [UIColor colorWithRed: 0.901f green: 0.196f blue: 0.232 alpha: 1.0f];
     red.text = @"КРАСНЫЙ";
     
     IVColor* blue = [[IVColor alloc] init];
-    blue.color = [UIColor colorWithRed: 0.196f green: 0.227f blue: 0.901 alpha: 1];
+    blue.color = [UIColor colorWithRed: 0.196f green: 0.227f blue: 0.901 alpha: 1.0f];
     blue.text = @"СИНИЙ";
     
     IVColor* green = [[IVColor alloc] init];
-    green.color = [UIColor colorWithRed: 0.184f green: 0.76f blue: 0.443 alpha: 1];
+    green.color = [UIColor colorWithRed: 0.184f green: 0.76f blue: 0.443 alpha: 1.0f];
     green.text = @"ЗЕЛЕНЫЙ";
     
     IVColor* orange = [[IVColor alloc] init];
-    orange.color = [UIColor colorWithRed: 0.913f green: 0.623f blue: 0.0063 alpha: 1];
+    orange.color = [UIColor colorWithRed: 0.913f green: 0.623f blue: 0.0063 alpha: 1.0f];
     orange.text = @"ОРАНЖЕВЫЙ";
     
     IVColor* magneta = [[IVColor alloc] init];
-    magneta.color = [UIColor colorWithRed: 0.913f green: 0.0063f blue: 0.843 alpha: 1];
+    magneta.color = [UIColor colorWithRed: 0.913f green: 0.0063f blue: 0.843 alpha: 1.0f];
     magneta.text = @"РОЗОВЫЙ";
     
     IVColor* lightBlue = [[IVColor alloc] init];
-    lightBlue.color = [UIColor colorWithRed: 0.501f green: 0.6f blue: 0.99 alpha: 1];
+    lightBlue.color = [UIColor colorWithRed: 0.501f green: 0.6f blue: 0.99 alpha: 1.0f];
     lightBlue.text = @"ГОЛУБОЙ";
     
     IVColor* black = [[IVColor alloc] init];
-    black.color = [UIColor colorWithRed: 0.1f green: 0.1f blue: 0.1 alpha: 1];
-    black.text = @"ЧЕРНЫЙ";
+    black.color = [UIColor colorWithRed: 0.513f green: 0.0f blue: 1.0f alpha: 1.0f];
+    black.text = @"ФИОЛЕТОВЫЙ";
     
     NSArray *arrayOfColors = [NSMutableArray arrayWithObjects:red, blue, green, orange, magneta, lightBlue, black, nil];
         
