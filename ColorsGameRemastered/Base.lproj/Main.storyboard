@@ -89,6 +89,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BackGroundOld.png" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-Id-Iu8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUm-lV-cQg">
                                 <rect key="frame" x="16" y="408" width="281" height="54"/>
                                 <color key="backgroundColor" red="0.46109011709999997" green="0.85101532199999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -160,29 +163,6 @@
                                     <action selector="colorButtonPressedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGX-tm-xlP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-3k-rkf">
-                                <rect key="frame" x="239" y="83" width="122" height="38"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="1mF-pd-Vv4"/>
-                                    <constraint firstAttribute="width" constant="122" id="6OK-ki-8Ki"/>
-                                    <constraint firstAttribute="height" constant="38" id="Urr-bW-7UB"/>
-                                    <constraint firstAttribute="width" secondItem="ixF-3k-rkf" secondAttribute="height" multiplier="109:35" constant="3.6571428571428584" id="rgL-gO-rr0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="19"/>
-                                <state key="normal" title="НОВАЯ ИГРА">
-                                    <color key="titleColor" red="0.51178865610000002" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1mF-pd-Vv4"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="startNewGameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2Q-Eb-JhB"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SCORE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts4-Gy-2ar">
                                 <rect key="frame" x="363" y="21" width="221" height="100"/>
                                 <constraints>
@@ -191,7 +171,7 @@
                                     <constraint firstAttribute="height" constant="100" id="t2y-0g-v0R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="76"/>
-                                <color key="textColor" red="1" green="0.65523858734673168" blue="0.2801096875354615" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.37907675010000003" blue="0.2652912214" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="122" height="108"/>
@@ -420,7 +400,6 @@
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="leading" secondItem="yC5-LB-pma" secondAttribute="trailing" constant="6" id="bl5-t3-6yA"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="trailing" secondItem="ycb-Dm-OPw" secondAttribute="trailing" id="cOO-Qh-xgi"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="firstBaseline" secondItem="yC5-LB-pma" secondAttribute="baseline" id="j16-nc-fbn"/>
-                            <constraint firstItem="ixF-3k-rkf" firstAttribute="top" secondItem="HP8-0l-ZOf" secondAttribute="bottom" constant="8" id="lYP-D3-IiE"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="top" secondItem="yC5-LB-pma" secondAttribute="top" id="lvx-NT-ePc"/>
                             <constraint firstItem="PTP-2b-eQC" firstAttribute="top" secondItem="G0D-Cg-qFu" secondAttribute="bottom" constant="13" id="mLX-Wh-PlH"/>
                             <constraint firstItem="yC5-LB-pma" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="p98-CN-OP6"/>
@@ -428,7 +407,6 @@
                             <constraint firstItem="G0D-Cg-qFu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s0t-iE-Dsz"/>
                             <constraint firstItem="ts4-Gy-2ar" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tbn-5Y-sYR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PTP-2b-eQC" secondAttribute="trailing" id="vbm-K4-4yl"/>
-                            <constraint firstAttribute="centerX" secondItem="ixF-3k-rkf" secondAttribute="centerX" id="wBT-Gu-o2r"/>
                             <constraint firstItem="UUm-lV-cQg" firstAttribute="baseline" secondItem="ycb-Dm-OPw" secondAttribute="firstBaseline" id="ycJ-oV-9a1"/>
                             <constraint firstItem="ycb-Dm-OPw" firstAttribute="leading" secondItem="UUm-lV-cQg" secondAttribute="trailing" constant="6" id="zyR-o4-dxZ"/>
                         </constraints>
@@ -499,13 +477,11 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="МЕСТО" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upc-hf-77t">
                                                     <rect key="frame" x="38" y="4" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
-                                                    <color key="textColor" red="0.54926802360000004" green="0.118773606" blue="0.80941384670000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СЧЕТ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cG9-WU-d2X">
                                                     <rect key="frame" x="204" y="4" width="54" height="21"/>
                                                     <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
-                                                    <color key="textColor" red="0.54926802360000004" green="0.118773606" blue="0.80941384670000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -546,6 +522,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackGroundOld.png" width="640" height="1136"/>
         <image name="LiveHeart.png" width="70" height="64"/>
     </resources>
 </document>
