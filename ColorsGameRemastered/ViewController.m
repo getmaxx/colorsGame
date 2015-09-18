@@ -10,7 +10,7 @@
 #import "IVColor.h"
 #import "IVGameState.h"
 
-static double IVDifficultyMedium = 5.0f;
+static double IVDifficultyMedium = 3.0f;
 static NSString* kSaveScoreKey = @"score";
 static NSString* kSaveLivesKey = @"lives";
 
